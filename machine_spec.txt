@@ -1,0 +1,29 @@
+# Machine specification (Q1). Fill in every field; give units. Fill in N/A if not applicable.
+
+CPU model                       : 12th Gen Intel(R) Core(TM) i7-12650H
+Microarchitecture               : Alder Lake; P: Golden Cove; E: Gracemont
+Physical cores                  : 10    
+Logical cores (hardware threads): 16
+Performance / efficiency cores  : 6 Performance cores / 4 Efficiency cores
+Base clock (GHz)                : Performance Core - 2.30 GHz, Efficiency core - 1.70 GHz
+Max single-core clock (GHz)     : Performance core - 4.70 GHz, Efficiency core - 3.50 GHz
+All-core clock under load (GHz) : Performance core  - 1.440 GHz, Efficiency core - 1.157 GHz  
+SIMD instruction set and width  : AVX2 + FMA3, 256-bit vectors, 8 FP32 elements
+FMA units per core              : Performance core - 2 x 256-bit; Efficiency - 2 x 128-bit
+Vector registers per core       : 16 architectural 256-bit YMM registers per hardware thread
+L1 data cache (per core)        : Performance - 48 KiB, Efficiency - 32 KiB
+L2 cache (size, shared by)      : Performance - 1.25 MiB per core, Efficiency - 2 MiB shared by all 4 Efficiency cores
+L3 cache (size, shared by)      : 24 MiB shared by all 10 cores
+Cache line size (bytes)         : 64 B
+RAM size (GB)                   : 16
+RAM type, speed (MT/s), channels: DDR4, 3200 MT/s, 2 x 64-bit channels (dual-channel)
+Operating system                : Ubuntu 22.04.5 LTS
+Compiler and version            : Ubuntu clang version 14.0.0-1ubuntu1.1    
+# Derived (show the calculation in report.pdf)
+Peak FP32 GFLOP/s, one core     : 150.4 GFLOP/s (one P-core at 4.70 GHz)
+Peak FP32 GFLOP/s, all cores    : 350.528 GFLOP/s at recorded all-core load clocks
+Memory bandwidth (GB/s)         : 51.2 GB/s (theoretical dual-channel DDR4-3200)
+Ridge point, one core (FLOP/B)  : 2.9375 FLOP/B 
+Ridge point, all cores (FLOP/B) : 6.84625 FLOP/B at recorded all-core load clocks
+
+
